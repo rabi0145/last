@@ -1,0 +1,160 @@
+/* =========================
+   BODY & ABOUT SECTION
+========================= */
+body.about-page {
+  background: #fef6f0; /* soft warm background */
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* About Section Container */
+.about-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* Section Content Layout */
+.section-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Image Styling */
+.about-image-wrapper {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Text Details Styling */
+.about-details {
+  flex: 2 1 500px;
+}
+
+.about-details h2 {
+  font-size: 2.8rem;
+  color: #d84315;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-details p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Highlight Quote */
+.about-details p.quote {
+  font-style: italic;
+  font-weight: 600;
+  color: #b71c1c;
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+
+/* Social Icons Styling */
+.social-icons {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.social-icons a {
+  display: inline-block;
+  font-size: 28px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.social-icons a.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icons a.youtube:hover {
+  color: #ff0000;
+}
+
+.social-icons a.twitter:hover {
+  color: #1da1f2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .section-content {
+    gap: 30px;
+  }
+
+  .about-details h2 {
+    font-size: 2.4rem;
+  }
+
+  .about-image {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .about-details h2 {
+    font-size: 2rem;
+  }
+
+  .about-details p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-details h2 {
+    font-size: 1.7rem;
+  }
+
+  .about-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-details p {
+    font-size: 0.95rem;
+  }
+
+  .social-icons a {
+    font-size: 24px;
+  }
+}

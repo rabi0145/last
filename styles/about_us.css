@@ -1,0 +1,155 @@
+/* =========================
+   BODY & ABOUT SECTION
+========================= */
+body.about-page {
+  background: linear-gradient(135deg, #f7c59f, #f0b48e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* About Section Container */
+.about-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* Layout: Image + Text */
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Image Styling */
+.about-image-wrapper {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* Text Details Styling */
+.about-details {
+  flex: 2 1 400px;
+}
+
+.about-details h2 {
+  font-size: 2.5rem;
+  color: #b71c1c;
+  text-align: left;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about-details p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+/* Quote Styling */
+.about-details p.quote {
+  font-style: italic;
+  color: #d84315;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 28px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.social-icons a.linkedin:hover {
+  color: #0077b5;
+}
+
+.social-icons a.youtube:hover {
+  color: #ff0000;
+}
+
+.social-icons a.twitter:hover {
+  color: #1da1f2;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .about-details h2 {
+    font-size: 2rem;
+  }
+
+  .about-image {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .about-details h2 {
+    text-align: center;
+  }
+
+  .social-icons {
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin: 0 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-details h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-details p {
+    font-size: 0.95rem;
+  }
+
+  .about-image {
+    width: 250px;
+    height: 250px;
+  }
+}

@@ -1,0 +1,94 @@
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* About Section */
+.footer-about h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #f39c12;
+  text-transform: uppercase;
+}
+
+.footer-about p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* Contact Section */
+.footer-contact h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #f39c12;
+  text-transform: uppercase;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+
+/* Footer Navigation Links */
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.footer-nav li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 15px 0;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-nav li {
+    display: block;
+    margin: 5px 0;
+  }
+}

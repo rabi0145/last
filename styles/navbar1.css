@@ -1,0 +1,121 @@
+/* HEADER */
+header {
+  width: 100%;
+  background: #222121;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Logo + Brand */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container img.logo {
+  height: 50px;
+}
+
+.logo-container h1 {
+  font-size: 28px;
+  color: rgb(232, 57, 8);
+  letter-spacing: 2px;
+}
+
+/* NAVIGATION */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(245, 37, 9);
+}
+
+/* LOGIN BUTTON */
+.login-container a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.login-container a:hover {
+  background: rgb(245, 37, 9);
+  border-color: rgb(245, 37, 9);
+}
+
+/* CART ICON */
+.cart-container a {
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.cart-container a:hover {
+  color: rgb(245, 37, 9);
+}
+
+.cart-count {
+  background: rgb(245, 37, 9);
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 7px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}
+
+/* ACTIONS GROUP */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}

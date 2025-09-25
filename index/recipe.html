@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipe Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #99eaea;
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: #d35400;
+      text-align: center;
+    }
+
+    .search-box {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .search-box input {
+      padding: 10px;
+      font-size: 16px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .search-box button {
+
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #d35400;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .recipe-result {
+      background: #a9a793;
+      padding: 20px;
+      border: 1px solid #161515;
+      border-radius: 10px;
+      max-width: 700px;
+      height:200px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      font:300px;
+    }
+
+    .not-found {
+      color: red;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Search Recipes</h1>
+
+  <form class="search-box" onsubmit="searchRecipe(event)">
+    <input type="text" id="searchInput" placeholder="Search recipes...">
+    <button type="submit">Search</button>
+  </form>
+
+  <div id="recipeDisplay"></div>
+
+  <script>
+    const recipes = {
+          "chicken burger": {
+    title: "Chicken Burger",
+    ingredients: "Chicken patty, bun, lettuce, tomato, mayo",
+    instructions: "Grill the patty, toast the bun, and assemble with fresh vegetables and sauce."
+  },
+  "kfc": {
+   title: "KFC Fried Chicken",
+        ingredients: "Chicken pieces, buttermilk, flour, salt, pepper, paprika, garlic powder, onion powder, herbs, cayenne pepper",
+        instructions: "Marinate chicken in buttermilk, coat with seasoned flour, then deep-fry until golden and cooked."
+      },
+         "sandwich": {
+        title: "Sandwich",
+        ingredients: "Bread slices, lettuce, tomato, cheese, mayonnaise",
+        instructions: "Layer ingredients between bread slices and serve."
+      },
+
+
+   "chowmein": {
+        title: "Chowmein",
+        ingredients: "Noodles, vegetables, soy sauce, garlic, oil",
+        instructions: "Stir-fry vegetables and noodles with soy sauce and garlic."
+      },
+
+
+     "biryani": {
+        title: "Biryani",
+        ingredients: "Basmati rice, chicken or vegetables, spices, yogurt, saffron",
+        instructions: "Cook spiced meat/veggies, layer with rice, and cook together until fragrant."
+      },
+      "thukpa": {
+        title: "Thukpa",
+        ingredients: "Noodles, vegetables, chicken or tofu, garlic, ginger, broth",
+        instructions: "Cook noodles and vegetables in spiced broth, serve hot."
+      },
+      "momo": {
+        title: "Momo",
+        ingredients: "Dough, ground meat or vegetables, garlic, ginger, spices",
+        instructions: "Fill dough with stuffing, steam until cooked."
+      },
+      "samosa": {
+        title: "Samosa",
+        ingredients: "Flour, potatoes, peas, spices, oil",
+        instructions: "Prepare dough and filling, shape samosas, deep fry until crisp."
+      },
+      "piccata": {
+        title: "Piccata",
+        ingredients: "Chicken or veal cutlets, lemon, capers, butter, olive oil",
+        instructions: "Cook cutlets in lemon butter sauce with capers."
+      },
+      "curry": {
+        title: "Curry",
+        ingredients: "Meat or vegetables, spices, onion, tomato, garlic, ginger",
+        instructions: "Cook ingredients in spiced sauce until tender."
+      },
+      "salad": {
+        title: "Salad",
+        ingredients: "Lettuce, cucumber, tomato, olive oil, lemon juice",
+        instructions: "Chop ingredients, toss with dressing."
+      },
+      "tikka": {
+        title: "Tikka",
+        ingredients: "Meat or paneer, yogurt, spices, lemon juice",
+        instructions: "Marinate and grill until cooked."
+      }
+    };
+    function searchRecipe(event) {
+      event.preventDefault(); // Stop form submission
+
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
+      const display = document.getElementById("recipeDisplay");
+      display.innerHTML = ""; // Clear previous results
+
+      if (recipes[input]) {
+        const recipe = recipes[input];
+        display.innerHTML = `
+          <div class="recipe-result">
+            <h2>${capitalize(input)}</h2>
+            <p><strong>Ingredients:</strong> ${recipe.ingredients}</p>
+            <p><strong>Instructions:</strong> ${recipe.instructions}</p>
+          </div>
+        `;
+      } else {
+        display.innerHTML = `<p class="not-found">Recipe not found. Try "Chicken Burger", "Spaghetti", or "Garden Salad".</p>`;
+      }
+    }
+
+    function capitalize(text) {
+      return text.charAt(0).toUpperCase() + text.slice(1);
+    }
+  </script>
+
+</body>
+</html>
