@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Services | MAXI MUNCH</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+/* Global Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: linear-gradient(135deg, #b71c1c, #d62828);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffbb33);
+  border-radius: 2px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 680px;
+  margin: auto;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Hero Section - Premium */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 90px;
+  background: linear-gradient(135deg, #7b1113, #b71c1c, #d62828);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Optional subtle pattern/texture */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+  opacity: 0.08;
+}
+
+/* Golden underline accent */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffbb33);
+  border-radius: 2px;
+}
+
+/* Text Styling */
+.hero h1 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  animation: fadeDown 1s ease forwards;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: auto;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeUp 1.2s ease 0.3s forwards;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .service-card img {
+    height: 160px;
+  }
+}
+
+
+    </style>
+</head>
+
+<body class="services-page">
+
+    <section class="hero">
+        <h1>Our Services</h1>
+        <p>Delighting every moment — from dine-in to delivery, we serve with passion.
+            Ambiance (casual, fine dining, family-friendly, romantic, etc.)
+    </section>
+
+    <section class="services-container">
+
+        <div class="service-card">
+            <img src="../image/dine in.jpg" alt="Dine-In" />
+            <h2>Dine-In</h2>
+            <p class="bold-text">enjoy your meal inside the restaurant where you can relax, soak in the ambiance, and
+                get served by the staff</p>
+        </div>
+
+        <div class="service-card">
+            <img src=https://tse1.mm.bing.net/th/id/OIP.UAtwE7zCL7w6heq3U0oBywHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3
+                alt="Delivery" />
+            <h2>Takeaway & Delivery</h2>
+            <p class="bold-text">you can either pick up your food yourself (takeaway) or have it brought to your home
+                (delivery) convenient ways to enjoy your favorite meals without dining in.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <img src=https://riverineplace.com/wp-content/uploads/2024/09/A-hotels-buffet-style-type-of-catering-service.jpg
+                alt="Catering" />
+            <h2>Catering</h2>
+            <p class="bold-text"> providing food and drink services for events like parties, weddings, or corporate
+                meetings, delivered or served at your chosen location..</p>
+        </div>
+
+        <div class="service-card">
+            <img src=https://www.blinkco.io/wp-content/uploads/2021/08/food-deliver-yapp-interface-mobile.jpg
+                alt="Online Orders" />
+            <h2>Online Orders</h2>
+            <p class="bold-text"> you can browse the menu and place your food order through our
+                website or app, making it quick and easy to get your meal without calling or visiting in person.
+        </div>
+
+        <div class="service-card">
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9DElpIbHOxj9CUPr4Im_IWDbyqAEzB2Ryig&s
+                alt="Online Orders" />
+            <h2>Special Menus</h2>
+            <p class="bold-text"> offer dishes for specific needs or occasions, like vegan, gluten-free, kids’
+                favorites, seasonal specials, or holiday celebrations—making sure everyone finds something tasty.</p>
+                </p>
+    </section>
+
+</body>
+
+</html>
