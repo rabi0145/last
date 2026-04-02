@@ -1,66 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAXI MUNCH</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="../styles/navbar1.css">
+  <link rel="stylesheet" href="../styles/hero1.css">
+  <link rel="stylesheet" href="../styles/featured_recipes1.css">
+  <link rel="stylesheet" href="../styles/footer1.css">
 </head>
-
-
 <body>
-    <header>
+  <header>
+  <div class="logo-container">
+    <img src="../image/logo.png" alt="Logo" class="logo" />
+    <h1>MAXI MUNCH</h1>
+  </div>
 
-        <div class="logo">
-            <img src="../image/logo.png" alt="Logo" />
-        </div>
-        <div class="container">
-            <h1 class>MAXi MUNCH</h1>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="home.HTML" class="white-link">Home</a></li>
-                    <li><a href="about.html" class="white-link">About</a></li>
-                    <li><a href="service.HTML" class="white-link">Service</a></li>
-                    <li><a href="contact.html" class="white-link">Contact</a></li>
-                </ul>
-            </nav>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="home.html" class="white-link">Home</a></li>
+      <li><a href="about.html" class="white-link">About</a></li>
+      <li><a href="service.html" class="white-link">Service</a></li>
+      <li><a href="contact.html" class="white-link">Contact</a></li>
+    </ul>
+  </nav>
 
-            <div class="login-container">
-                <form class="login-form">
-                    <h2><a href="login.html" class="white-link">Login</a></h2>
-                </form>
-            </div>
+  <div class="actions">
+    <div class="login-container">
+      <a href="login.html">Login</a>
+    </div>
+    <div class="cart-container">
+      <a href="cart.html">🛒 <span class="cart-count">0</span></a>
+    </div>
+  </div>
+</header>
 
-            <div class="cart-container">
-                <a href="cart.html" class="cart-icon">
-                    🛒
-                    <span class="cart-count"></span>
-                </a>
-    </header>
 
-    <!--....Hero section....-->
-    <!-- <section class="hero">
-        <div class="hero-section">
-            <h2>welcome to our Recipe Collection!</h2>
-            <p> wBigger bites,bolder flavours-Phat Chicken brands with the
-                ultimate fried chicken experience.</p>
-            <form action="#" class="search-box">
-                <input type="text" placeholder="search recipe">
-                <button type="submit">search</button>
-            </form>
-        </div>
-
-    </section> -->
-
-    <section class="hero-slider">
+  <section class="hero-slider">
         <div class="slide active"
             style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
             <div class="slide-content">
                 <h2>Welcome to Our Recipe Collection!</h2>
                 <p>Experience mouthwatering dishes crafted with passion and fresh ingredients that bring the flavors of
                     the world to your plate.</p>
-                <form action="recipe.html" class="search-box">
+                <form action="recipe1.html" class="search-box">
                     <input type="text" placeholder="Search recipes...">
                     <button type="submit">Search</button>
                 </form>
@@ -106,8 +90,7 @@
     </section>
 
 
-
-    <!--....Recipe section....-->
+  <!--....Recipe section....-->
     <section class="recipes">
         <h2>FEATURED RECIPES</h2>
         <div class="recipe-section">
@@ -148,8 +131,8 @@
                 <h2>Biryani</h2>
                 <p>Chicken biryani is a fragrant and flavorful rice dish made with basmati rice, tender chicken
                     pieces, and a blend of aromatic spices. Cooked with layers of marinated chicken and rice, it's a
-                    popular South Asian delicacy known for its rich taste and mouthwatering aroma.
-                    <a href="biryani_price.html">View Price</a>
+                    popular South Asian delicacy known for its rich taste and mouthwatering aroma.</p>
+                <a href="biryani_price.html">View Price</a>
             </div>
             <div class="recipe-card">
                 <img src="../image/thukpa.jpg" alt="Thukpa">
@@ -163,8 +146,8 @@
                 <img src="../image/momo.avif" alt="Momo">
                 <h2>Momo </h2>
                 <p>Chicken momo is a popular dumpling filled with spiced minced chicken and steamed or fried to
-                    perfection. these juicy dumplings are typically served with a tangy and spicy dipping sauce.
-                    <a href="momo_price.html">View Price</a>
+                    perfection. these juicy dumplings are typically served with a tangy and spicy dipping sauce.</p>
+                <a href="momo_price.html">View Price</a>
             </div>
             <div class="recipe-card">
                 <img src="../image/samosa.jpeg" alt="Samosa">
@@ -209,51 +192,28 @@
         </div>
     </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>Maxi MUNCH</h3>
+        <p>
+          Serving delicious bites in Kathmandu. Meals made with love and local
+          ingredients.
+        </p>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p><strong>Phone:</strong> 01-4528604</p>
+        <p><strong>Email:</strong> jamuna.com.np</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Maxi MUNCH Restaurant • All rights reserved</p>
+    </div>
+  </footer>
 
-    <!--footer-->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>Maxi MUNCH</h3>
-                <p>Serving delicious bites in Capital City Of Nepal
-                    (Kathmandu), meals made with love and local ingredients.
-                    Whether you're grabbing a quick snack or dining in with friends,
-                    enjoy flavorful food in a relaxed setting.
-            </div>
-
-            <div class="footer-contact">
-                <h4>Contact Us</h4>
-                <p><strong>Phone:</strong> 01-4528604</p>
-                <p><strong>Reservations:</strong>
-                <p><strong>Email:</strong> <a href="mailto:jamuna@.np">jamunabaiju.com.np</a></p>
-            </div>
-
-            <div class="footer-hours">
-                <h4>Opening Hours</h4>
-                <p>Mon–Fri: 11 AM – 10 PM</p>
-                <p>Brunch (Sat–Sun): 8 AM – 1 PM</p>
-                <p>Breakfast by reservation only</p>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>Maxi MUNCH Restaurant •All right reserved </p>
-        </div>
-    </footer>
-
-    <!--....Footer Section....-->
-    <!-- <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 MAXI MUNCH. All rights reserved.</p>
-            <ul class="footer-nav">
-                <li><a href="about.html">About</a></li>
-                <li><a href="recipe.html">Recipes</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="price.html">Pricing</a></li>
-            </ul>
-        </div>
-    </footer> -->
-
-
+  <!-- Slider Script -->
+  <script src="../slider.js/slider.js" defer></script>
 </body>
 </html>

@@ -8,103 +8,156 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
     <style>
-        /* Global Styles */
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #fff8f0;
-            color: #333;
-        }
+/* Global Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px 30px;
-            background-color: #d62828;
-            color: #fff;
-        }
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+}
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 90px 20px 60px;
+  background: linear-gradient(135deg, #b71c1c, #d62828);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  position: relative;
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: auto;
-            font-weight: 300;
-        }
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffbb33);
+  border-radius: 2px;
+}
 
-        /* Services Container */
-        .services-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            padding: 50px 30px;
-            max-width: 1200px;
-            margin: auto;
-        }
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
-        /* Service Card as Rectangle Box */
-        .service-card {
-            background-color: #fff;
-            border: 2px solid #d62828;
-            border-radius: 8px;
-            overflow: hidden;
-            height: 360px;
-            display: flex;
-            flex-direction: column;
-            transition: border-color 0.3s ease, transform 0.3s ease;
-        }
+.hero p {
+  font-size: 1.25rem;
+  max-width: 680px;
+  margin: auto;
+  font-weight: 400;
+  opacity: 0.95;
+}
 
-        .service-card:hover {
-            border-color: #a21b1b;
-            cursor: pointer;
-            transform: translateY(-5px);
-            box-shadow: 0 6px 18px rgba(166, 22, 22, 0.3);
-        }
+/* Hero Section - Premium */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 90px;
+  background: linear-gradient(135deg, #7b1113, #b71c1c, #d62828);
+  color: #fff;
+  overflow: hidden;
+}
 
-        .service-card img {
-            width: 100%;
-            height: 140px;
-            object-fit: cover;
-            border-bottom: 2px solid #d62828;
-        }
+/* Optional subtle pattern/texture */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+  opacity: 0.08;
+}
 
-        .service-card h2 {
-            font-size: 1.4rem;
-            margin: 15px 20px 10px;
-            color: #d62828;
-            flex-shrink: 0;
-        }
+/* Golden underline accent */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ffbb33);
+  border-radius: 2px;
+}
 
-        .service-card p {
-            font-size: 1rem;
-            color: #555;
-            padding: 0 20px 20px;
-            flex-grow: 1;
-            line-height: 1.4;
-        }
+/* Text Styling */
+.hero h1 {
+  font-size: 3.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  animation: fadeDown 1s ease forwards;
+}
 
-        /* Responsive tweaks */
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: auto;
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeUp 1.2s ease 0.3s forwards;
+}
 
-            .hero p {
-                font-size: 1rem;
-            }
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-            .service-card {
-                height: auto;
-            }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-            .service-card img {
-                height: 160px;
-            }
-        }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .service-card img {
+    height: 160px;
+  }
+}
+
+
     </style>
 </head>
 
